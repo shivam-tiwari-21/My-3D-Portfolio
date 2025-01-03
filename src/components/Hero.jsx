@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop Full-Stack Web Applications, <br className="sm:block hidden" />
-            primarily using the MERN Stack.
+            primarily using the MERN Stack from Scratch
           </p>
         </div>
       </div>

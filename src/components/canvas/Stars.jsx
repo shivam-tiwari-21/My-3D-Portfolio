@@ -26,16 +26,17 @@ const Stars = (props) => {
     </group>
   )
 }
-const StarsCanvas=()=>{
-  return(
-    <div className='w-full h-auto absolute inset-0 z-[-1]' >
-      <Canvas camera={{position:[0,0,1]}}>
+const StarsCanvas = () => {
+  return (
+    <div className="w-full h-full fixed inset-0 z-[-1]">
+      <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
-          <Stars/>
+          <Stars />
         </Suspense>
-        <Preload all/>
+        <Preload all />
       </Canvas>
     </div>
-  )
-}
+  );
+};
+
 export default StarsCanvas

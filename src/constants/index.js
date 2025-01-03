@@ -8,20 +8,22 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
+    expressjs,
+    python,
+    java,
+    wordpress,
     figma,
-    docker,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
+    mystore,
     jobit,
-    tripguide,
+    myPortfolio,
     threejs,
   } from "../assets";
   
@@ -46,7 +48,7 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Frontend Developer",
       icon: mobile,
     },
     {
@@ -54,7 +56,7 @@ import {
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Wordpress Developer",
       icon: creator,
     },
   ];
@@ -81,8 +83,20 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Express JS",
+      icon: expressjs,
+    },
+    {
+      name: "Wordpress",
+      icon: wordpress,
+    },
+    {
+      name: "Python",
+      icon:python,
+    },
+    {
+      name: "Java",
+      icon: java,
     },
     {
       name: "Tailwind CSS",
@@ -107,10 +121,6 @@ import {
     {
       name: "figma",
       icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
     },
   ];
   
@@ -198,9 +208,9 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "My Store",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to Create, Delete, Update and Fetch Products. It uses Express Api in order to interact with the server. ",
       tags: [
         {
           name: "react",
@@ -210,56 +220,65 @@ import {
           name: "mongodb",
           color: "green-text-gradient",
         },
+         {
+          name: "expressJs",
+          color: "pink-text-gradient",
+        }, {
+          name: "nodeJs",
+          color: "green-text-gradient",
+        },
         {
           name: "tailwind",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: mystore,
+      project_link:"",
+      source_code_link: "https://github.com/shivam-tiwari-21/MystoreProject",
     },
     {
-      name: "Job IT",
+      name: "Shivam's Portfolio",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "It's My Portfolio as a Full-Stack Developer which you're probably viewing right now. It's created using React, ThreeJs, some 3D Modals and bunch of other techs",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "threeJs",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "emailJs",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: myPortfolio,
+      project_link:"",
+      source_code_link: "https://github.com/shivam-tiwari-21/My-3D-Portfolio",
     },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
-    },
+    // {
+    //   name: "Trip Guide",
+    //   description:
+    //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    //   tags: [
+    //     {
+    //       name: "nextjs",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "supabase",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "css",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   image: tripguide,
+    //   source_code_link: "https://github.com/",
+    // },
   ];
   
   export { services, technologies, experiences, testimonials, projects };
