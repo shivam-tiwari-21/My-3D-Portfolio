@@ -38,7 +38,7 @@ const ProjectCard=({index, name, description, tags, image, source_code_link}) =>
 
            <div
           onClick={()=> window.open(
-            source_code_link, "_blank"
+            project_link, "_blank"
           )}
           className=" w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
           >
