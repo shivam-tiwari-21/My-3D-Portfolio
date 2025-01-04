@@ -9,11 +9,11 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'], // Separate React and ReactDOM into a vendor chunk
-           three: ['three'],
+          three: ['three'], // Separate three.js into its own chunk
         },
       },
-      chunkSizeWarningLimit: 1000, // Increase warning limit if needed
     },
+    chunkSizeWarningLimit: 1000, // This should be placed here, not inside rollupOptions
   },
   server: {
     port: 3000,
