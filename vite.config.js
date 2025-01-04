@@ -1,19 +1,26 @@
-import { defineConfig } from 'vite'; // Import defineConfig
-import react from '@vitejs/plugin-react'; // Import the React plugin
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  define: {
-    'process.env': process.env, // Pass environment variables
+  base: '/', // Adjust this if deploying to a subdirectory
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'], // Separate React and ReactDOM into a vendor chunk
+           three: ['three'],
+        },
+      },
+      chunkSizeWarningLimit: 1000, // Increase warning limit if needed
+    },
   },
   server: {
-    port: process.env.PORT || 3000, // Use Render's PORT variable
-    host: '0.0.0.0', // Bind to all network interfaces
-  },
-  preview: {
-    port: process.env.PORT || 3000, // Same as server settings
+    port: 3000,
     host: '0.0.0.0',
   },
-  base: '/', // Adjust this if deploying to a subdirectory
+  preview: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 });
