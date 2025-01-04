@@ -13,6 +13,16 @@
   color-scheme: dark;
 }
 
+
+.section-container {
+  height: 100vh; /* Ensure the section takes the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

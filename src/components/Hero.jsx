@@ -23,7 +23,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <div className="section-container">
+  <ComputersCanvas />
+</div>
+
 
       {/* Animated div component placed below modal */}
       <div className="absolute w-full flex justify-center items-center z-10">
