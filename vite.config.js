@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // Adjust this if deploying to a subdirectory
   build: {
+    outDir: 'dist', // Change to 'build' if needed
     rollupOptions: {
       output: {
         manualChunks: {
@@ -13,11 +14,11 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000, // This should be placed here, not inside rollupOptions
+    chunkSizeWarningLimit: 1000, // Avoid chunk size warnings
   },
   server: {
     port: 3000,
-    host: '0.0.0.0',
+    host: '0.0.0.0', // Necessary for Render to expose the server externally
   },
   preview: {
     port: 3000,
