@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // Adjust this if deploying to a subdirectory
   build: {
-    outDir: 'dist', // Change to 'build' if needed
+    outDir: 'build', // Change output folder to 'build'
     rollupOptions: {
       output: {
         manualChunks: {
