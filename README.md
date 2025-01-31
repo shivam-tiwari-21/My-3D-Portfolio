@@ -1,2 +1,2 @@
 # My-3D-Portfolio
-Website is under progress
+Website is under process
