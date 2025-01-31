@@ -5,9 +5,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files properly
-app.use(express.static('build', { extensions: ['html', 'js', 'css', 'json'] }));
+app.use(express.static('dist', { extensions: ['html', 'js', 'css', 'json'] }));
 
-// Fix MIME issues
+// Fix MIME issues for JS files
 app.use((req, res, next) => {
   if (req.url.endsWith('.js')) {
     res.type('application/javascript');
@@ -15,9 +15,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Handle React routing
+// Handle React routing (ensure correct index.html is served)
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve('build', 'index.html'));
+  res.sendFile(path.resolve('dist', 'index.html'));
 });
 
 app.listen(port, '0.0.0.0', () => {
