@@ -1,17 +1,25 @@
 import express from 'express';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
 const app = express();
-const __dirname=path.resolve();
-
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// Serve static files properly
+app.use(express.static('build', { extensions: ['html', 'js', 'css', 'json'] }));
+
+// Fix MIME issues
+app.use((req, res, next) => {
+  if (req.url.endsWith('.js')) {
+    res.type('application/javascript');
+  }
+  next();
 });
 
-app.listen(port,'0.0.0.0', () => {
+// Handle React routing
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve('build', 'index.html'));
+});
+
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
