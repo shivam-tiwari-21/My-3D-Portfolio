@@ -5,9 +5,7 @@ import { ComputersCanvas } from "./canvas";
 const Hero = () => {
   return (
     <section className="relative w-full mx-auto py-16">
-      <div
-        className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5`}
-      >
+      <div className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-60 h-30 violet-gradient" />
@@ -30,20 +28,21 @@ const Hero = () => {
             I develop Full-Stack Web Applications
             <br className="sm:block hidden" />
             primarily using the MERN Stack from Scratch
-            <a
-      href="https://drive.google.com/file/d/1M1NNxWTQlygB5Cwf46GT-48H-fw0N6-0/view?usp=sharing"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold shadow-lg hover:bg-purple-700 transition-all duration-300"
-    >
-      View Resume
-    </a>
           </motion.p>
-           
+
+          {/* View Resume Button */}
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://drive.google.com/file/d/1M1NNxWTQlygB5Cwf46GT-48H-fw0N6-0/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold shadow-lg hover:bg-purple-700 transition-all duration-300"
+            >
+              View Resume
+            </a>
+          </div>
         </div>
       </div>
-
-    
 
        {/*  <div className="section-container">
        <ComputersCanvas /> 
