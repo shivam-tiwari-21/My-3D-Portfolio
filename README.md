@@ -20,10 +20,15 @@ This project is live on render [Click to visit](https://shivam-portfolio-vlsu.on
 To run this project, you will need to add the following environment variables to your .env file
 
 `VITE_EMAIL_API_KEY=/your email js api key/`
+
 `VITE_EMAIL_ID=/your email id/`
+
 `VITE_EMAIL_NAME=/your email name/`
+
 `VITE_EMAIL_SERVICE_ID=/your email js service id/`
+
 `VITE_EMAIL_TEMPLATE_ID=/your email js template id/`
+
 `PORT=3000`
 
 
