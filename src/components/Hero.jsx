@@ -34,6 +34,15 @@ const Hero = () => {
         </div>
       </div>
 
+      <a
+      href="https://drive.google.com/file/d/1M1NNxWTQlygB5Cwf46GT-48H-fw0N6-0/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold shadow-lg hover:bg-purple-700 transition-all duration-300"
+    >
+      View Resume
+    </a>
+
        {/*  <div className="section-container">
        <ComputersCanvas /> 
       </div>* /}
