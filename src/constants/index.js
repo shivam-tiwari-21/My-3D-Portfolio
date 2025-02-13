@@ -23,6 +23,7 @@ import {
     shopify,
     mystore,
     jobit,
+    myTodoApp,
     myPortfolio,
     threejs,
   } from "../assets";
@@ -257,6 +258,28 @@ import {
       image: myPortfolio,
       project_link:"https://shivam-portfolio-vlsu.onrender.com/",
       source_code_link: "https://github.com/shivam-tiwari-21/My-3D-Portfolio",
+    },
+      {
+      name: "ToDo App",
+      description:
+        "It's a simple Todo App , it was build while learning MERN concepts. It perfoms basic CRUD operation like fetching the tasks, adding new tasks, updating and deleting th task",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "axios",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: myTodoApp,
+      project_link:"https://todoapp-tzrk.onrender.com/",
+      source_code_link: "https://github.com/shivam-tiwari-21/TodoAPP",
     },
     // {
     //   name: "Trip Guide",
