@@ -5,9 +5,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="relative z-0 bg-primary">
+      <div className="w-full h-full fixed inset-0 z-[-1] pointer-events-none">
           {/* StarsCanvas rendered globally */}
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
           
           {/* Main Content */}
             <Navbar />
