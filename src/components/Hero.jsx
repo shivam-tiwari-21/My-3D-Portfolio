@@ -10,7 +10,7 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 sm:h-60 h-30 violet-gradient" />
         </div>
         <div>
           <motion.h1 
@@ -24,7 +24,7 @@ const Hero = () => {
             style={{overflow:"hidden",whiteSpace:"nowrap"}}
             initial={{width:0}}
             animate={{width:"100%"}}
-            transition={{duration:2, ease:"easeInOut"}}
+            transition={{duration:4, ease:"easeInOut"}}
             className={${styles.heroSubText} mt-2 text-white-100}>
             I develop Full-Stack Web Applications, <br className="sm:block hidden" />
             primarily using the MERN Stack from Scratch
