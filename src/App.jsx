@@ -7,7 +7,7 @@ function App() {
       <BrowserRouter>
         <div className="relative z-0 bg-primary">
           {/* StarsCanvas rendered globally */}
-          <StarsCanvas />
+          {/* <StarsCanvas /> */}
           
           {/* Main Content */}
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
