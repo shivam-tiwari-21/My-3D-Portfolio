@@ -13,13 +13,22 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <motion.h1 
+            initial={{y:25, opacity:0}}
+            animate={{y:0, opacity:1}}
+            transition={{duration:2, ease:"easeInOut"}}
+            className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915eff]">Shivam Tiwari</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          </motion.h1>
+          <motion.p
+            style={{overflow:"hidden",whiteSpace:"nowrap"}}
+            initial={{width:0}}
+            animate={{width:"100%"}}
+            transition={{duration:2, ease:"easeInOut"}}
+            className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop Full-Stack Web Applications, <br className="sm:block hidden" />
             primarily using the MERN Stack from Scratch
-          </p>
+          </motion.p>
         </div>
       </div>
 
