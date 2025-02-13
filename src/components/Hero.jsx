@@ -30,8 +30,7 @@ const Hero = () => {
             I develop Full-Stack Web Applications
             <br className="sm:block hidden" />
             primarily using the MERN Stack from Scratch
-          </motion.p>
-           <a
+            <a
       href="https://drive.google.com/file/d/1M1NNxWTQlygB5Cwf46GT-48H-fw0N6-0/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
@@ -39,6 +38,8 @@ const Hero = () => {
     >
       View Resume
     </a>
+          </motion.p>
+           
         </div>
       </div>
 
