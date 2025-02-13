@@ -34,9 +34,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="section-container">
-        {/* <ComputersCanvas /> */}
-      </div>
+       {/*  <div className="section-container">
+       <ComputersCanvas /> 
+      </div>* /}
 
       {/* Animated div component placed below modal */}
       <div className="w-full flex justify-center items-center z-10 mt-10">
