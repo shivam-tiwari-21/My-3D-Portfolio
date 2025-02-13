@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       <div className="section-container">
-        {/* <ComputersCanvas /> */}
+        <ComputersCanvas />
 </div>
 
 
