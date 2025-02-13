@@ -6,9 +6,10 @@ function App() {
     <>
       <BrowserRouter>
       <div className="relative z-0 bg-primary">
-          {/* StarsCanvas rendered globally */}
+          {/* StarsCanvas rendered globally 
           <div><StarsCanvas /></div>
-          
+          */}
+        
           {/* Main Content */}
             <Navbar />
             <Hero />
