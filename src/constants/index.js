@@ -262,7 +262,7 @@ import {
       {
       name: "ToDo App",
       description:
-        "It's a simple Todo App , it was build while learning MERN concepts. It perfoms basic CRUD operation like fetching the tasks, adding new tasks, updating and deleting th task",
+        "It's a simple Todo App , it was build while learning MERN concepts. It perfoms basic CRUD operation like fetching the tasks, adding new tasks, updating and deleting the task",
       tags: [
         {
           name: "react",
