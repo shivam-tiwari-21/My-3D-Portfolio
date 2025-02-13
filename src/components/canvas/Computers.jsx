@@ -4,10 +4,10 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const computer = useGLTF('/desktop_pc/scene.gltf'); // ✅ Corrected path
 
   return (
-    <mesh>
+    <>
       {/* Lighting for the model */}
       <hemisphereLight intensity={1} groundColor="black" />
       <pointLight intensity={1.4} />
@@ -17,16 +17,16 @@ const Computers = ({ isMobile }) => {
         penumbra={1}
         intensity={1.4}
         castShadow
-        shadow-mapSize={1024}
+        shadow-mapSize={{ width: 1024, height: 1024 }} // ✅ Fixed syntax
       />
       {/* 3D Model */}
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.3: 0.25} // Responsive scaling
-        position={isMobile ? [0, -2.5, -0.5] : [0, -1.35, 0]} // Centered positions
+        scale={isMobile ? 0.3 : 0.25}
+        position={isMobile ? [0, -2.5, -0.5] : [0, -1.35, 0]}
         rotation={[-0.01, -0.2, -0.1]}
       />
-    </mesh>
+    </>
   );
 };
 
@@ -35,17 +35,14 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
-    setIsMobile(mediaQuery.matches);
 
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+    const updateSize = () => setIsMobile(mediaQuery.matches);
+    updateSize(); // ✅ Set initial state
 
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    mediaQuery.addListener(updateSize); // ✅ Better compatibility
 
-    // Cleanup function to remove the event listener
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      mediaQuery.removeListener(updateSize);
     };
   }, []);
 
@@ -53,23 +50,22 @@ const ComputersCanvas = () => {
     <div
       style={{
         width: '100%',
-        height: isMobile ? '140vh' : '280vh', // Adjusted height for better visibility
+        height: '100vh', // ✅ Truly responsive without blank space
       }}
     >
       <Canvas
         frameloop="demand"
         shadows
-        camera={{ position: [20, 3, 5], fov: 25 }} // Camera farther back
+        camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
       >
         <Suspense fallback={<CanvasLoader />}>
-          {/* Circular rotation for the model */}
           <OrbitControls
             enableZoom={false}
             autoRotate={true}
             autoRotateSpeed={2}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
+            maxPolarAngle={Math.PI - 0.1} // ✅ Allows vertical movement
+            minPolarAngle={0.1}
           />
           <Computers isMobile={isMobile} />
         </Suspense>
