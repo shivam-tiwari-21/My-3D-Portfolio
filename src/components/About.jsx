@@ -39,7 +39,7 @@ const About = () => {
           <p className={styles.sectionSubText}>Introduction</p>
           <h1 className={styles.sectionHeadText}>Overview</h1>
           <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+            variants={slideIn("right", "tween", 0.2, 1)}
             className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
             Hi! I'm Shivam Tiwari, a Full-Stack Developer with a strong command of the MERN Stack ( MongoDB, Express.js, React.js, and Node.js ). 
@@ -53,7 +53,7 @@ const About = () => {
         <div className="lg:w-1/2 mt-10 lg:mt-0 lg:ml-6">
           <Tilt className="w-full max-w-sm mx-auto lg:mx-0">
             <motion.div
-              variants={fadeIn("left", "spring", 0.2, 0.75)}
+              variants={slideIn("left", "tween", 0.2, 1)}
               className="w-full violet-gradient p-[2px] rounded-3xl shadow-card"
             >
               <div
