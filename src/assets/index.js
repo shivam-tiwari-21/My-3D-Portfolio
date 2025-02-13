@@ -1,5 +1,6 @@
 import photo from "./photo.jpeg";
 import myPortfolio from "./myPortfolio.png";
+import myTodoApp from "./myTodoApp.png";
 import logo from "./logo.png";
 import backend from "./backend.png";
 import link from "./link.png";
@@ -41,6 +42,7 @@ import tripguide from "./tripguide.png";
 export {
   logo,
   myPortfolio,
+  myTodoApp,
   photo,
   backend,
   creator,
